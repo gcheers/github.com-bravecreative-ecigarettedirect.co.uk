@@ -1,0 +1,231 @@
+<html>
+
+<head>
+
+   <title>Mr T's Quote Box</title>
+
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merienda" />
+   <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+
+   <script type="text/javascript">
+	   
+	   
+	   function getphone () {
+
+         var phones = new Array(
+	     "Motorola mobile",    
+         "BlackBerry", 
+         "HTC",
+         "iPhone",
+         "Huawei phone",
+         "HTC One",
+         "HTC Desire",
+         "HTC M8",
+         "HTC M9",
+         "Samsung S4",
+         "iPhone 6",
+         "iPhone 5",
+         "Samsung s5",
+         "iPhone 5C",
+         "iPhone 6+",
+         "HTC phone",
+         "iPhone 4S",
+         "iPhone 3GS",
+         "Samsung Galaxy"
+         );
+         		
+		var phone = Math.floor(Math.random()* phones.length);   
+		return phones[phone];   	   
+	   }
+
+      function getQuote() {
+
+         var part1 = new Array(
+	     "It worked! ",
+	     "Cool! ",    
+         "I was bit skeptical that this would actually work if I'm honest. ",
+         "I didn't know if this would work but it did. ", 	  
+         "Really pleased with this website! ",
+         "",
+         "Oh Wow... ",
+         "Relieved this worked. ",
+         "Impressed. ",
+         "This was so easy. ",
+         "",
+         "Can't recommend this website highly enough. ", 
+         "Eaaaaaasssssyyyyy! ",
+         "So easy! ",
+         "UnlockingOnline.com Delivered! ",
+         "",
+         "Well Done Unlocking Online! ",
+         "",
+         "Seriously impressive!!! ",
+         "What a result! ",
+         "",
+         "Impressive! ",
+         "Straight forward and simple. ",
+         "",
+         "I'm a bit surprised this worked but glad it did. ",
+         "Glad I didn't get ripped off. Few scam sites around it seems. ",
+         "Totally Legit. ",
+         "Genuine Service. ",
+         "",
+         "Great service. ",
+         "Great company to buy from. "
+         );
+       
+         var rpart1 = Math.floor(Math.random()* part1.length);
+         
+         var part2 = new Array(
+         "I unlocked my " + getphone() + " with total ease",
+         "I got them to unlock my " + getphone(),
+         "Unlocking Online removed the network lock on my " + getphone(),          
+         "Unlocking Online managed to provide an unlock for my " + getphone(),
+         getphone() + " unlocked super fast",         
+         "My " + getphone() + " was quickly unlocked",
+         "My " + getphone() + " was easy to unlock");
+         var rpart2 = Math.floor(Math.random()* part2.length);
+         
+         var part4 = new Array(
+	     "",    
+         " which was locked to o2", 
+         ". Was desperate to leave Vodafone",
+         ". I couldn't get it unlocked from Vodafone",
+         ". I was struggling to get Vodafone to unlock it",
+         "",
+         " that was on Orange",
+         " with the clear instructions provided",
+         "..",
+         " which was on T-Mobile",
+         " away from Tesco",
+         " on T-Mobile",
+         " so that I could move away from Vodafone who I really couldn't wait to leave",
+         ". I can finally throw my useless Vodafone SIM away",
+         "",
+         ". Can finally bin Vodafone - YAY",
+         "",
+         " away from 3 in the UK");
+         var rpart4 = Math.floor(Math.random()* part4.length);         
+         
+         var part7 = new Array(
+         ". Would definitely use again!", 
+         ".",
+         ". Instructions were clear and process was simple. All good. Thanks.",
+         ". Have told all my friends and family - highly recommended.",
+         ". Will be recommending to everyone I know.",         
+         ".",
+         ". Will be back again when I get a new phone and need to unlock that one too.",
+         ". Excellent Service!",
+         ".",
+         ". Quality service.",
+         ". Happy Customer :-)",
+         ". 5 star rating.",
+         ".",
+         ". Good, honest service.",
+         ". Thank you so much!",
+         ". Will be back if need unlocking in future.",         
+         ". Recommended!",
+         ". :-)",
+         ". Will come back if I need any more phones unlocking. Thanks.",
+         ". Excellent Service!",         
+         ". 5 stars!",
+         ". A website to trust.",
+         ". Simples :-)",
+         ". Really Happy Daughter!",
+         ". The Granddaughter is happy. Thanks.",
+         ". If someone of my age can do it, anyone can.",
+         ". Thank You.",
+         ". Thanx xxx.",
+         ". Phone recycled and given to my Mum.",
+         ". Phone now being used by Dad. He's Happy."
+         );
+         var rpart7 = Math.floor(Math.random()* part7.length);         
+                
+         
+
+         $("#myBox").html(part1[rpart1] + part2[rpart2] + part4[rpart4] + part7[rpart7]);
+
+         var sigs = new Array(
+         "Sarah Jones", 
+         "Miss Jones", 
+         "S. Jones",
+         "Miss S. Jones",
+         "Ms. Sarah Jones");
+
+         var randomChoice = Math.floor(Math.random()* sigs.length)         
+
+         $("#mySig").html(sigs[randomChoice]);
+      }
+
+   </script>
+
+   <style type="text/css">
+
+      #mybox {
+		font: 400 28px/1.2 'Merienda', Helvetica, sans-serif;     	      
+        position: absolute; 
+        left: 220px; 
+        top: 100px; 
+        z-index: 1; 
+        width:680px; 
+        height:130px; 
+        background-color: transparent; 
+        display: block;
+        text-align: left;
+      }         
+      #mysig {
+		font: 400 24px/1.2 'Merienda', Helvetica, sans-serif;     	      
+        position: absolute; 
+        left: 650px; 
+        top: 260px; 
+        z-index: 1; 
+        width:320px; 
+        height:130px; 
+        background-color: transparent; 
+        display: block; 
+        text-align: center;
+      }               
+
+	  p{      
+		position: relative; 
+        width: 250px; 
+        height: 20px; 
+        background-color: #5bdd5b;
+        text-align: center; 
+        padding: 9px; 
+        font-size: 20px; 
+        font-family: arial;
+        border: 2px solid #000;         
+      }
+
+       a:link {color:#000000; text-decoration: none;}
+
+       a:visited {color:#000000; text-decoration: none;}  /* visited link */
+
+       a:hover {color:#000000; text-decoration: none;}  /* mouse over link */
+
+       a:active {color:#000000; text-decoration: none;}
+
+   </style>
+</head>
+
+<body onload="javascript:getQuote()">
+
+   <div style="position: absolute; z-index: -1;">
+   <img src="mrt.jpg">
+   </div>
+
+   <div id="myBox">
+   You're gonna meet my friend, PAIN!
+   </div>
+    <div id="mySig">
+   You're gonna meet my friend, PAIN!
+   </div>
+
+   <P>
+     <a href="javascript:getQuote()">Generate Random Review</a>
+   </p>
+
+</body>
+</html>
